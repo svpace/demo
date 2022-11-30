@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+svg {
+	width: min(100vw, calc(100vh - 4.5em));
+	height: auto;
+}
+
+button {
+	margin-top: 1em;
+	appearance: none;
+}
+
+:root {
+	--hue: 200;
+}
+
+button {
+	/* Text Colors */
+	--text-saturation: 90%;
+	--text-lightness: 40%;
+
+	--text-saturation-hover: calc(var(--text-saturation) + 10%);
+	--text-lightness-hover: calc(var(--text-lightness) - 5%);
+
+	--text-saturation-active: var(--text-saturation-hover);
+	--text-lightness-active: calc(var(--text-lightness) - 10%);
+
+	--text-saturation-disabled: calc(var(--text-saturation) - 60%);
+	--text-lightness-disabled: calc(var(--text-lightness) + 10%);
+
+	/* Background Colors */
+	--background-saturation: 0%;
+	--background-lightness: 100%;
+
+	--background-saturation-hover: calc(var(--background-saturation) + 80%);
+	--background-lightness-hover: calc(var(--background-lightness) - 5%);
+
+	--background-saturation-active: var(--background-saturation-hover);
+	--background-lightness-active: calc(var(--background-lightness) - 10%);
+
+	--background-saturation-disabled: calc(var(--background-saturation) + 30%);
+	--background-lightness-disabled: calc(var(--background-lightness) - 10%);
+
+	/* Border Colors */
+	--border-saturation: 90%;
+	--border-lightness: 60%;
+
+	--border-saturation-hover: calc(var(--border-saturation) + 10%);
+	--border-lightness-hover: calc(var(--border-lightness) - 10%);
+
+	--border-saturation-active: var(--border-saturation-hover);
+	--border-lightness-active: calc(var(--border-lightness) - 20%);
+
+	--border-saturation-disabled: calc(var(--border-saturation) - 60%);
+	--border-lightness-disabled: calc(var(--border-lightness) + 20%);
+
+	/* Focus shadow styles */
+	--shadow-saturation-focus: 100%;
+	--shadow-lightness-focus: 85%;
+
+	/* Color Styles */
+	color: hsl(var(--hue), var(--text-saturation), var(--text-lightness));
+	background-color: hsl(var(--hue), var(--background-saturation), var(--background-lightness));
+	border: 0.1em solid hsl(var(--hue), var(--border-saturation), var(--border-lightness));
+
+	/* Misc. Styles */
+	border-radius: 0.25em;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	transition-property: box-shadow, background-color, border-color, color;
+	transition-timing-function: ease-out;
+	transition-duration: 0.2s;
+}
+
+button:hover {
+	color: hsl(var(--hue), var(--text-saturation-hover), var(--text-lightness-hover));
+
+	background-color: hsl(
+		var(--hue),
+		var(--background-saturation-hover),
+		var(--background-lightness-hover)
+	);
+
+	border-color: hsl(var(--hue), var(--border-saturation-hover), var(--border-lightness-hover));
+}
+
+button:active {
+	color: hsl(var(--hue), var(--text-saturation-active), var(--text-lightness-active));
+
+	background-color: hsl(
+		var(--hue),
+		var(--background-saturation-active),
+		var(--background-lightness-active)
+	);
+
+	border-color: hsl(var(--hue), var(--border-saturation-active), var(--border-lightness-active));
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.25em
+		hsl(var(--hue), var(--shadow-saturation-focus), var(--shadow-lightness-focus));
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica,
+		Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
