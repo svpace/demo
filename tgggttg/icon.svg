@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+	viewBox="0 0 512 512" role="img">
+	<defs>
+		<filter id="shadow">
+			<feDropShadow dx="5" dy="5" stdDeviation="5" flood-color="#555" />
+		</filter>
+	</defs>
+	<rect width="512" height="512" stroke="black" fill="none" />
+	<path d="M100,0
+		h50v50h50v50
+		h50v-50h50v-50
+		h50v50h-50v50
+		h50v100h50v-100
+		h50v100h-50v50
+		h-50v50h-50v50
+		h50v50h-50v-50
+		h-50v-50h-50v50
+		h-50v50h-50v-50
+		h50v-50h-50v-50
+		h-50v-50h-50v-100
+		h50v100h50v-100
+		h50v-50h-50z
+		M150,150v50h50v-50z
+		M250,150v50h50v-50z" stroke="black" fill="purple" style="filter:url(#shadow);" transform="translate(31,56)" />
+</svg>
